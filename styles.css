@@ -1,10 +1,22 @@
- .container{
-    display: flex;
-    justify-content: center;
- }
- 
- canvas {
-     /* border: 1px solid black; */
-   
+ .container {
+     display: flex;
+     justify-content: center;
+     width: 100%;
  }
 
+ canvas {
+     border: 1px solid black;
+     width: 100%;
+     height: auto;
+     max-width: 900px;
+     aspect-ratio: 3 / 1;
+ }
+
+@media only screen and (max-width: 600px) {
+    canvas {
+        transform: rotate(90deg);
+        transform-origin: center;
+        width: 100vh;
+        margin-top: 10rem;
+    }
+}
